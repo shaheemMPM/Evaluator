@@ -74,3 +74,7 @@ ipcMain.on('asynchronous-message', (event, args) => {
     openFile(event)
   }
 })
+
+ipcMain.on('data-channel', (event, args) => {
+  console.log(args);
+})
