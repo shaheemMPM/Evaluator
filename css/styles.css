@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 .container {
     width: 90%;
     height: 90%;
@@ -16,5 +20,25 @@
 }
 
 .no-que {
-    margin: 10px 200px 10px 200px;
+    margin: 10px 20px 10px 20px;
+}
+
+.cs-ip {
+    text-align: center;
+}
+
+.cs-ip::-webkit-inner-spin-button, 
+.cs-ip::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.res-ip {
+    text-align: center;
+}
+
+#corRes {
+    margin-bottom: 20px;
 }

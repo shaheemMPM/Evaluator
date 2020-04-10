@@ -15,9 +15,19 @@
         <button class="button is-link" id="btnOpen">Open Responses</button>
         <div id="filename"></div>
       </div>
-      <div class="no-que">
-        <input class="input" type="number" placeholder="Number of Questions">
+      <div class="columns no-que">
+        <div class="column">
+          <input class="input cs-ip" id="ipNoQue" type="number" placeholder="Number of Questions">
+        </div>
+        <div class="column">
+          <input class="input cs-ip" id="ipNoJunk" type="number" placeholder="Number of Columns before Response">
+        </div>
       </div>
+      <div id="corRes"></div>
+      <div class="button-outer">
+        <button class="button is-success" id="btnEvaluate">Evaluate</button>
+      </div>
+    </div>
     <!-- You can also require other files to run in this process -->
     <script type="module" src="./renderer.js"></script>
   </body>
