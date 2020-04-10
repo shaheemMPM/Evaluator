@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs')
 const excelToJson = require('convert-excel-to-json')
 
-let mainWindow;
+let mainWindow
 
 function createWindow () {
   // Create the browser window.
@@ -51,26 +51,26 @@ let FindResult = (content) => {
   const data = excelToJson({
     source: content
   })
-  console.log(data)
+  // console.log(data)
 }
 
-let openFile = () => {
-
+let openFile = (event) => {
   dialog.showOpenDialog(mainWindow, {
     properties: ['openFile'],
     filters: [{name: 'SpreadSheet', extensions: ['xlsx']}]
   }).then(result => {
-      const file = result.filePaths[0];
+      const file = result.filePaths[0]
       const fileContent = fs.readFileSync(file)
       FindResult(fileContent)
+      let fileName = file.split('/').pop()
+      event.sender.send('asynchronous-reply', fileName)
   }).catch(err => {
       console.log(err)
-  });
-
+  })
 }
 
-ipcMain.on('asynchronous-message', (evennt, args) => {
+ipcMain.on('asynchronous-message', (event, args) => {
   if (args === 'openDialog') {
-    openFile();
+    openFile(event)
   }
 })

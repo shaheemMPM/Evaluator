@@ -5,10 +5,14 @@
 // selectively enable features needed in the rendering
 // process.
 
-const {ipcRenderer} = require('electron');
+const {ipcRenderer} = require('electron')
 
-const btnOpen = document.getElementById('btnOpen');
+const btnOpen = document.getElementById('btnOpen')
 
 btnOpen.addEventListener('click', () => {
-    ipcRenderer.send('asynchronous-message', 'openDialog');  
+    ipcRenderer.send('asynchronous-message', 'openDialog') 
+})
+
+ipcRenderer.on('asynchronous-reply', (event, arg) => {
+    document.getElementById('filename').innerText = arg
 })

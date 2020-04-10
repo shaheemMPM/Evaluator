@@ -5,10 +5,19 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Evaluator</title>
   </head>
   <body>
-    <button id="btnOpen">Open XLSX</button>
+    <div class="container">
+      <div class="button-outer">
+        <button class="button is-link" id="btnOpen">Open Responses</button>
+        <div id="filename"></div>
+      </div>
+      <div class="no-que">
+        <input class="input" type="number" placeholder="Number of Questions">
+      </div>
     <!-- You can also require other files to run in this process -->
     <script type="module" src="./renderer.js"></script>
   </body>

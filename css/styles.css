@@ -1,0 +1,20 @@
+.container {
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.button-outer {
+    text-align: center;
+}
+
+.button-outer div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #0F7541;
+}
+
+.no-que {
+    margin: 10px 200px 10px 200px;
+}
