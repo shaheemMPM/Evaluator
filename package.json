@@ -16,6 +16,7 @@
     "electron": "^8.2.0"
   },
   "dependencies": {
-    "convert-excel-to-json": "^1.6.1"
+    "convert-excel-to-json": "^1.6.1",
+    "json2xls": "^0.1.2"
   }
 }

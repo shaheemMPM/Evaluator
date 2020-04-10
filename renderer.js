@@ -28,6 +28,11 @@ ipcRenderer.on('asynchronous-reply', (event, arg) => {
     fileName.innerText = arg
 })
 
+ipcRenderer.on('success-reply', (event, arg) => {
+    alert(`Result File Downloaded in ${arg}`)
+    window.location.reload()
+})
+
 ipNoQue.addEventListener('input', () => {
     let noQue = Number(ipNoQue.value)
     renderColumns(noQue)
