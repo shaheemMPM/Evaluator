@@ -1,0 +1,21 @@
+{
+  "name": "evaluator",
+  "version": "1.0.0",
+  "description": "An electron app to Evaluate MCQ Responses in a XLSX file",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.2.0"
+  },
+  "dependencies": {
+    "convert-excel-to-json": "^1.6.1"
+  }
+}
